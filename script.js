@@ -30,7 +30,7 @@ navMenu.querySelectorAll(".nav-menu__link").forEach((link) => {
 });
 
 /* ---------- Stack de cards de serviços (sem dependencias) ---------- */
-function initStack(container, { sensitivity = 140, randomRotation = true, elastic = 0.6 } = {}) {
+function initStack(container, { sensitivity = 70, randomRotation = true, elastic = 1 } = {}) {
   let cards = Array.from(container.children);
 
   function restTransform(card, i) {
