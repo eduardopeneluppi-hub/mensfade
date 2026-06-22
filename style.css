@@ -183,7 +183,7 @@ body{
 .reveal{
   opacity: 0;
   transform: translateY(36px);
-  transition: opacity 0.9s cubic-bezier(.16,.84,.44,1), transform 0.9s cubic-bezier(.16,.84,.44,1);
+  transition: opacity 0.9s cubic-bezier(.215,.61,.355,1), transform 0.9s cubic-bezier(.215,.61,.355,1);
 }
 
 .reveal.reveal--delay-1{
@@ -306,8 +306,14 @@ body{
 /* mantém a entrada suave do .reveal (0.9s) até o card aparecer;
    depois disso, volta a usar a transição rápida de toque acima */
 .barber-card.reveal:not(.is-visible){
-  transition: opacity 0.9s cubic-bezier(.16,.84,.44,1), transform 0.9s cubic-bezier(.16,.84,.44,1);
+  transition: opacity 0.9s cubic-bezier(.215,.61,.355,1), transform 0.9s cubic-bezier(.215,.61,.355,1);
 }
+
+/* efeito cascata: os 4 cards do grid entram em sequência, não todos juntos */
+.barbers-grid .barber-card.reveal:not(.is-visible):nth-child(1){ transition-delay: 0s; }
+.barbers-grid .barber-card.reveal:not(.is-visible):nth-child(2){ transition-delay: 0.1s; }
+.barbers-grid .barber-card.reveal:not(.is-visible):nth-child(3){ transition-delay: 0.2s; }
+.barbers-grid .barber-card.reveal:not(.is-visible):nth-child(4){ transition-delay: 0.3s; }
 
 .barber-card[data-photo]:active{
   transform: scale(0.96);
