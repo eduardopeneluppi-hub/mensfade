@@ -303,6 +303,12 @@ body{
   transition: transform 0.2s ease;
 }
 
+/* mantém a entrada suave do .reveal (0.9s) até o card aparecer;
+   depois disso, volta a usar a transição rápida de toque acima */
+.barber-card.reveal:not(.is-visible){
+  transition: opacity 0.9s cubic-bezier(.16,.84,.44,1), transform 0.9s cubic-bezier(.16,.84,.44,1);
+}
+
 .barber-card[data-photo]:active{
   transform: scale(0.96);
 }
