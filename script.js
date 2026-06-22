@@ -129,6 +129,25 @@ document.querySelectorAll(".stack-container").forEach((el) => initStack(el));
   const navLogo = document.querySelector(".navbar__brand-logo");
   if (!heroLogoWrap || !navLogo) return;
 
+  // Navegadores embutidos (WhatsApp, Instagram etc.) costumam recarregar a
+  // página silenciosamente pouco depois de abrir, reiniciando este script e
+  // fazendo a intro da logo "voltar para o início". Guardamos em sessionStorage
+  // para que, dentro da mesma sessão, a logo vá direto para a navbar sem repetir a intro.
+  let alreadyShown = false;
+  try {
+    alreadyShown = sessionStorage.getItem("mfLogoIntroShown") === "1";
+  } catch (e) {}
+
+  if (alreadyShown) {
+    heroLogoWrap.style.display = "none";
+    navLogo.classList.add("is-visible");
+    return;
+  }
+
+  try {
+    sessionStorage.setItem("mfLogoIntroShown", "1");
+  } catch (e) {}
+
   setTimeout(() => {
     const heroRect = heroLogoWrap.getBoundingClientRect();
     const navRect = navLogo.getBoundingClientRect();
