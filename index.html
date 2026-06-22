@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Men's Fade Studio | Barbearia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="#" class="navbar__brand">
+    <img src="assets/logo-mens-transparent.png" alt="Men's Fade Studio" class="navbar__brand-logo">
+    <span class="navbar__brand-text">Men's Fade Studio</span>
+  </a>
+
+  <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+    <span class="navbar__toggle-bar"></span>
+    <span class="navbar__toggle-bar"></span>
+    <span class="navbar__toggle-bar"></span>
+  </button>
+</nav>
+
+<div class="nav-menu" id="navMenu">
+  <ul class="nav-menu__list">
+    <li><a href="#" class="nav-menu__link">Início</a></li>
+    <li><a href="#servicos" class="nav-menu__link">Serviços</a></li>
+    <li><a href="#barbeiros" class="nav-menu__link">Barbeiros</a></li>
+    <li><a href="#agendar" class="nav-menu__link">Agendar</a></li>
+    <li><a href="#contato" class="nav-menu__link">Contato</a></li>
+  </ul>
+</div>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<section class="hero">
+  <video src="assets/hero-video.mp4" autoplay muted loop playsinline class="hero__img"></video>
+  <div class="hero__logo-wrap">
+    <img src="assets/logo-mens-transparent.png" alt="Men's Fade Studio" class="hero__logo">
+    <div class="hero__logo-shine"></div>
+  </div>
+
+  <a href="#barbeiros" class="btn-donate hero__cta-btn">Agende seu horário</a>
+  <a href="#servicos" class="btn-donate hero__cta-btn hero__cta-btn--second">Nossos Serviços</a>
+</section>
+
+<section id="barbeiros" class="section3">
+  <img src="assets/hero-mens.jpg" alt="" class="section3__img">
+
+  <h2 class="section3__title"><span class="title-badge reveal">Com quem deseja cortar?</span></h2>
+  <p class="section3__subtitle reveal">Clique no card</p>
+
+  <div class="barbers-grid">
+    <div class="barber-card reveal" data-name="Thiago" data-photo="assets/barber-thiago.png" data-instagram="https://www.instagram.com/othiagobarber/" data-booking="https://colavo.link/-few6U/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnYlQ2tkIndvpZ-fvZ-7Ap6S9Gs4HB18RSQeYFis9ihNDOqWkuAjKmXndjb_0_aem_6ThCwnzjfGDUNvvTHSC3sQ&from=-MChlfT5FrwmzNdEVdT5&channel=colavo_booklink&expire=1782159157">
+      <div class="barber-card__photo"><img src="assets/barber-thiago.png" alt="Thiago"></div>
+      <div class="barber-card__name">Thiago</div>
+    </div>
+    <div class="barber-card reveal" data-name="Henrique" data-photo="assets/barber-henrique.jpeg" data-instagram="https://www.instagram.com/ovieirabarber_/" data-booking="https://booksy.com/pt-br/410953_mens-fade-studio_barbearias_1026706_sao-jose-dos-campos/staffer/507123#ba_s=dl_1">
+      <div class="barber-card__photo"><img src="assets/barber-henrique.jpeg" alt="Henrique"></div>
+      <div class="barber-card__name">Henrique</div>
+    </div>
+    <div class="barber-card reveal">
+      <div class="barber-card__photo"></div>
+      <div class="barber-card__name">Barbeiro 3</div>
+    </div>
+    <div class="barber-card reveal">
+      <div class="barber-card__photo"></div>
+      <div class="barber-card__name">Barbeiro 4</div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="services">
+  <img src="assets/section3-bg.jpg" alt="" class="services__img">
+
+  <h2 class="services__title"><span class="title-badge reveal">Nossos Serviços</span></h2>
+
+  <div class="stack-group">
+    <h3 class="stack-group__title reveal"><span class="stack-group__badge">Arraste ou clique</span></h3>
+    <div class="stack-wrap reveal reveal--delay-1">
+      <div class="stack-container" id="stackCorte">
+        <div class="card-rotate"><div class="card">
+          <img src="assets/services/corte-maquina-tesoura.jpg" alt="Corte na Máquina e Tesoura" class="card__img">
+          <div class="card__name">Corte na Máquina e Tesoura</div>
+          <div class="card__price">R$ 40,00</div>
+        </div></div>
+        <div class="card-rotate"><div class="card">
+          <img src="assets/services/corte-maquina-tesoura-sobrancelha.jpg" alt="Corte na Máquina e Tesoura + Sobrancelha" class="card__img">
+          <div class="card__name">Corte na Máquina e Tesoura + Sobrancelha</div>
+          <div class="card__price">R$ 45,00</div>
+        </div></div>
+        <div class="card-rotate"><div class="card">
+          <img src="assets/services/corte-tesoura.jpg" alt="Corte na Tesoura" class="card__img">
+          <div class="card__name">Corte na Tesoura</div>
+          <div class="card__price">R$ 40,00</div>
+        </div></div>
+        <div class="card-rotate"><div class="card">
+          <img src="assets/services/corte-tesoura-sobrancelha.jpg" alt="Corte na Tesoura + Sobrancelha" class="card__img">
+          <div class="card__name">Corte na Tesoura + Sobrancelha</div>
+          <div class="card__price">R$ 45,00</div>
+        </div></div>
+        <div class="card-rotate"><div class="card">
+          <img src="assets/services/cabelo-barba-terapia.jpg" alt="Cabelo e Barba Terapia" class="card__img">
+          <div class="card__name">Cabelo e Barba Terapia</div>
+          <div class="card__price">R$ 65,00</div>
+        </div></div>
+        <div class="card-rotate"><div class="card">
+          <img src="assets/services/cabelo-barba-sobrancelha.jpg" alt="Cabelo e Barba + Sobrancelha" class="card__img">
+          <div class="card__name">Cabelo e Barba + Sobrancelha</div>
+          <div class="card__price">R$ 70,00</div>
+        </div></div>
+        <div class="card-rotate"><div class="card">
+          <img src="assets/services/barba.jpg" alt="Barba" class="card__img">
+          <div class="card__name">Barba</div>
+          <div class="card__price">R$ 35,00</div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel reveal">
+    <div class="carousel__track" id="carouselTrack">
+      <img src="assets/carousel/carrosel-1.png" alt="Corte 1" class="carousel__img">
+      <img src="assets/carousel/carrosel-2.png" alt="Corte 2" class="carousel__img">
+      <img src="assets/carousel/carrosel-3.png" alt="Corte 3" class="carousel__img">
+      <img src="assets/carousel/carrosel-4.png" alt="Corte 4" class="carousel__img">
+      <img src="assets/carousel/carrosel-5.png" alt="Corte 5" class="carousel__img">
+      <img src="assets/carousel/carrosel-6.png" alt="Corte 6" class="carousel__img">
+      <img src="assets/carousel/carrosel-1.png" alt="Corte 1" class="carousel__img">
+      <img src="assets/carousel/carrosel-2.png" alt="Corte 2" class="carousel__img">
+      <img src="assets/carousel/carrosel-3.png" alt="Corte 3" class="carousel__img">
+      <img src="assets/carousel/carrosel-4.png" alt="Corte 4" class="carousel__img">
+      <img src="assets/carousel/carrosel-5.png" alt="Corte 5" class="carousel__img">
+      <img src="assets/carousel/carrosel-6.png" alt="Corte 6" class="carousel__img">
+    </div>
+  </div>
+
+</section>
+
+<section id="section4" class="section4">
+  <img src="assets/section4-bg.jpg" alt="" class="section4__img">
+  <img src="assets/section4-thiago.png" alt="" class="section4__overlay-img">
+
+  <div class="cena-stage" id="cenaStage">
+    <div class="cena cena--1" data-cena="1">
+      <h2 class="cena__title-xl">O que você está esperando para renovar sua confiança?</h2>
+    </div>
+
+    <div class="cena cena--2" data-cena="2">
+      <h2 class="cena__insta-title">
+        Nos siga já no
+        <span class="insta-word">
+          <svg class="insta-svg" viewBox="0 0 448 512" aria-hidden="true">
+            <defs>
+              <linearGradient id="instaGradientScene" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#feda75"/>
+                <stop offset="25%" stop-color="#fa7e1e"/>
+                <stop offset="50%" stop-color="#d62976"/>
+                <stop offset="75%" stop-color="#962fbf"/>
+                <stop offset="100%" stop-color="#4f5bd5"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#instaGradientScene)" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+          </svg>
+          <span class="insta-gradient-text">Instagram</span>
+        </span>
+        e fique por dentro de tudo!
+      </h2>
+      <img src="assets/iphone-thithi.png" alt="Men's Fade Studio no Instagram" class="cena__phone">
+    </div>
+
+    <div class="cena cena--final" data-cena="final">
+      <h3 class="cena__final-title">Nossa localização</h3>
+      <a class="cena__final-map" href="https://www.google.com/maps/search/?api=1&query=Av.+Pararangaba%2C+341%2C+Jardim+Pararangaba%2C+S%C3%A3o+Jos%C3%A9+dos+Campos+-+SP%2C+12224-790" target="_blank" rel="noopener" aria-label="Abrir localização no Google Maps">
+        <iframe class="cena__final-map-frame" title="Mapa Men's Fade Studio" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.+Pararangaba,+341,+Jardim+Pararangaba,+S%C3%A3o+Jos%C3%A9+dos+Campos+-+SP,+12224-790&output=embed"></iframe>
+      </a>
+      <button type="button" class="btn-instagram cena__final-insta-btn" id="instaTriggerBtn">
+        <svg viewBox="0 0 448 512" width="20" height="20" aria-hidden="true">
+          <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+        </svg>
+        Seguir no Instagram
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="insta-overlay" id="instaOverlay">
+  <button class="insta-overlay__close" id="instaOverlayClose" aria-label="Fechar">&times;</button>
+  <div class="insta-overlay__content">
+    <h2 class="cena__insta-title">
+      Nos siga já no
+      <span class="insta-word">
+        <svg class="insta-svg" viewBox="0 0 448 512" aria-hidden="true">
+          <defs>
+            <linearGradient id="instaGradientOverlay" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#feda75"/>
+              <stop offset="25%" stop-color="#fa7e1e"/>
+              <stop offset="50%" stop-color="#d62976"/>
+              <stop offset="75%" stop-color="#962fbf"/>
+              <stop offset="100%" stop-color="#4f5bd5"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#instaGradientOverlay)" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+        </svg>
+        <span class="insta-gradient-text">Instagram</span>
+      </span>
+      e fique por dentro de tudo!
+    </h2>
+    <img src="assets/iphone-thithi.png" alt="Men's Fade Studio no Instagram" class="cena__phone insta-overlay__phone">
+    <a class="btn-instagram insta-overlay__link" href="https://www.instagram.com/mensfadestudio/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 448 512" width="20" height="20" aria-hidden="true">
+        <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+      </svg>
+      Abrir Instagram
+    </a>
+  </div>
+</div>
+
+<div class="carousel-lightbox" id="carouselLightbox">
+  <button class="carousel-lightbox__close" id="carouselLightboxClose" aria-label="Fechar">&times;</button>
+  <img class="carousel-lightbox__photo" id="carouselLightboxPhoto" src="" alt="">
+</div>
+
+<div class="barber-lightbox" id="barberLightbox">
+  <div class="barber-lightbox__backdrop"></div>
+  <div class="barber-lightbox__panel">
+    <button class="barber-lightbox__close" id="barberLightboxClose" aria-label="Fechar">&times;</button>
+    <img class="barber-lightbox__photo" id="barberLightboxPhoto" src="" alt="">
+    <div class="barber-lightbox__actions">
+      <a class="btn-donate barber-lightbox__book" id="barberLightboxBook" href="#" target="_blank" rel="noopener">Agendar com</a>
+      <a class="btn-instagram" id="barberLightboxInstagram" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 448 512" width="20" height="20" aria-hidden="true">
+          <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+        </svg>
+        <span id="barberLightboxInstagramText">Seguir</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
