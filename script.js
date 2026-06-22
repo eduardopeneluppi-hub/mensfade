@@ -146,32 +146,38 @@ document.querySelectorAll(".stack-container").forEach((el) => initStack(el));
     heroLogoWrap.style.transform = "none";
     heroLogoWrap.style.opacity = "1";
 
-    // força o navegador a "commitar" essa posição (sem transição) antes de animar
-    heroLogoWrap.getBoundingClientRect();
-
-    requestAnimationFrame(() => {
-      heroLogoWrap.classList.add("is-traveling");
-      requestAnimationFrame(() => {
-        heroLogoWrap.style.top = navRect.top + "px";
-        heroLogoWrap.style.left = navRect.left + "px";
-        heroLogoWrap.style.width = navRect.width + "px";
-        heroLogoWrap.style.height = navRect.height + "px";
-      });
-    });
-
-    heroLogoWrap.addEventListener(
-      "transitionend",
-      function onArrive(e) {
-        if (e.propertyName !== "top") return;
-        navLogo.classList.add("is-visible");
-        heroLogoWrap.classList.add("is-arrived");
-        heroLogoWrap.style.opacity = "0";
-        heroLogoWrap.removeEventListener("transitionend", onArrive);
-        setTimeout(() => {
-          heroLogoWrap.style.display = "none";
-        }, 350);
-      }
+    // Web Animations API: garante que o callback de término sempre dispara,
+    // diferente do truque de rAF duplo + transitionend (que falhava em alguns navegadores/dispositivos).
+    const flight = heroLogoWrap.animate(
+      [
+        {
+          top: heroRect.top + "px",
+          left: heroRect.left + "px",
+          width: heroRect.width + "px",
+          height: heroRect.height + "px",
+        },
+        {
+          top: navRect.top + "px",
+          left: navRect.left + "px",
+          width: navRect.width + "px",
+          height: navRect.height + "px",
+        },
+      ],
+      { duration: 1100, easing: "cubic-bezier(.65,0,.35,1)", fill: "forwards" }
     );
+
+    flight.onfinish = () => {
+      heroLogoWrap.style.top = navRect.top + "px";
+      heroLogoWrap.style.left = navRect.left + "px";
+      heroLogoWrap.style.width = navRect.width + "px";
+      heroLogoWrap.style.height = navRect.height + "px";
+      navLogo.classList.add("is-visible");
+      heroLogoWrap.style.transition = "opacity 0.3s ease";
+      heroLogoWrap.style.opacity = "0";
+      setTimeout(() => {
+        heroLogoWrap.style.display = "none";
+      }, 350);
+    };
   }, 7000);
 })();
 
